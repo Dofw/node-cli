@@ -13,6 +13,10 @@ program
   .description("study build myself Cli Tool !!!")
   .version("1.0.0", "-V, --version", "版本号")
   .option("-h, --help", "帮助选项")
+  .option("-d, --id <value>")
+  .action((a, b) => {
+    console.log(program.opts())
+  })
 
 // 子命令
 program

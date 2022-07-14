@@ -53,13 +53,37 @@ bgxxxBright
 
     - no- 使用是false, 单独使用是true, 如果首先定义 --foo， 那么在 --no-foo 不会改变默认值
 
+    - --optional [value] 可选参数 改形式会识别成
+    
+    ```
+      如果-5作为参数，要用=
+      --id -5 会报错 找不到-5option
+      需要使用这种方式--id=-5
+
+      --id 不指定参数值，是id=true
+    ```
+    - Variadic 可变参数 ...
+
+    ```
+    .option('-n, --number <numbers...>', 'specify  numbers')
+    $ collect -n 1 2 3 --letter a b c
+    Options:  { number: [ '1', '2', '3' ], letter: [ 'a', 'b', 'c' ] }
+    ```
+    - Version 默认flags are -V and --version
+    
+    ```
+    program.version('0.0.1', '-v, --vers', 'output the current version');
+    ```
+
+    - --optional <value> 必填参数，使用了option，就必须携带值。
+
     - 常用格式如下
 
     ```
       .option('-p, --pizza-type <type>', 'flavour of pizza', 'default');`
     ```
 
-
+2. more configuration
 
 # StackOverflow study
 
