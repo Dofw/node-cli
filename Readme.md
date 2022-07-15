@@ -85,6 +85,15 @@ bgxxxBright
 
 2. more configuration
 
+  - 有一些限制条件，不太常见的情况。
+
+  .addOption(new Option('-s, --secret').hideHelp()) 在help中隐藏功能。
+
+  - 自定义 option 的加工。
+
+  .option('-f, --float <number>', 'float argument', parseFloat)， parseFloat函数接受两个参数，value、previous
+
+
 # StackOverflow study
 
 搜索技巧：the search term 搜索项、搜索词
