@@ -93,6 +93,11 @@ bgxxxBright
 
   .option('-f, --float <number>', 'float argument', parseFloat)， parseFloat函数接受两个参数，value、previous
 
+3. Commands 子命令
+  
+
+
+
 
 # StackOverflow study
 
