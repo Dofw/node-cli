@@ -104,6 +104,8 @@ bgxxxBright
 搜索技巧：the search term 搜索项、搜索词
 
 1. 设置特殊的 tags 范围, 使用 [vue] xxx
+  1.1 or operator, [tag1] or [tag2], 返回这两个的。
+
 2. 在引号中，键入简练的短语  a specific phrase（短语），使用 "flat tire"
 3. 将搜索项限制在 title上，使用 title：followed by the search term
 4. 只在代码块中搜索，使用 code：xxxxx
@@ -131,7 +133,25 @@ bgxxxBright
    1. user:mine` or `user:me，搜索的是你的帖子
    2. inbookmarks:mine（or user id），搜索的是 id 已经添加的书签的问题
    3. initags:mine（or user id），搜索标记为收藏的标签中的帖子。
-4. Boolean Operator
-   1. 
-
+4. Boolean Operator, no 代表非。
+   1. isaccepted: yes/true/1, 表示返回已标记为接受的答案。
+   2. hascode: yes/true/1, 表示返回只包含代码快的帖子。
+   3. hasaccepted: yes/true/1, 表示返回已经接受答案的问题。
+   4. isanswered: yes/true/1, 表示只返回至少有一个正面答案的问题。
+   5. closed: yes/true/1, 表示只返回已经关闭的问题。
+   6. duplicate: Yes/true/1, 返回被标记为重复的问题;No /false/0从搜索中排除重复的问题。
+   7. migrated: yes/true/1, 返回已经被迁移到不同站点的问题。
+   8. locked: yes/true/1, 只返回锁定的帖子(有编辑、投票、评论和禁用的新答案);否/false/0只返回未锁定的帖子。
+   9. hasnotice: yes/trur/1, 只返回带有如下通知的帖子。
+   10. wiki: yes/ture/1, 只返回社区的wiki帖子。
 ​		
+5. miscellaneous(复杂的, 其他的)
+  1. url: 'example.com', 搜索包含url的帖子
+  2. is: question, 返回的仅仅是问题
+  3. is: answer, 返回的仅仅是答案
+  4. inquestion:50691, 将搜索限制到id 50691的问题。
+  5. inquestion:this, 这将结果限制在你已经查看的帖子上。
+
+6. Collectives(集体、集合)
+  1. collective: 'Name', 在集合“名称”中搜索帖子
+  2. is:article 在集合中搜索文章
